@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 
-//import Logo from '../../components/AuthComponent/Logo';
+import Logo from '../../components/AuthComponent/Logo';
 import LoginForm from '../../components/AuthComponent/LoginForm';
-
+import Overlay from '../../components/UI/overlay';
 
 class LoginScreen extends Component {
 
@@ -11,12 +11,6 @@ class LoginScreen extends Component {
     /* static navigationOptions = {
         header: null
     } */
-
-    componentDidMount() {
-    }
-
-    componentDidUpdate() {
-    }
 
     isAuth = res => {
         if (res === false) {
@@ -32,10 +26,11 @@ class LoginScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ImageBackground style={styles.background} imageStyle={{resizeMode:'stretch'}} source={require('../../assets/background.jpg')}>
-                    {/* <Logo /> */}
-                    <LoginForm loginStatusVerified={this.isAuth} />
+                <ImageBackground style={styles.background} imageStyle={{ resizeMode: 'stretch' }} source={require('../../assets/background.jpg')}>
                 </ImageBackground>
+                <Overlay color={"rgba(0,0,0,0.25)"}/>
+                <Logo />
+                <LoginForm loginStatusVerified={this.isAuth} />
             </View>
         );
     }
@@ -49,11 +44,11 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: 'orange'
     },
-    background:{
-        position:'absolute',
+    background: {
+        position: 'absolute',
         top: 0,
-        left:0,
-        width:'100%',
-        height:'100%',
+        left: 0,
+        width: '100%',
+        height: '100%',
     }
 });

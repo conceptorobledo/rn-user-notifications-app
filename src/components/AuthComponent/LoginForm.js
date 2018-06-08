@@ -1,7 +1,8 @@
 // Formik x React Native example
 import React, { Component } from 'react';
 import firebase from 'react-native-firebase';
-import { Button, Text, TextInput, View, StyleSheet } from 'react-native';
+import { Text, TextInput, View, StyleSheet } from 'react-native';
+import  AuthButton  from '../Buttons/AuthButton';
 import { withFormik } from 'formik';
 
 const enhancer = withFormik({
@@ -49,7 +50,7 @@ const loginForm = props => {
           placeholderTextColor='#fff'    
         />
       </View>
-      <Button style={styles.loginButton} onPress={handleSubmit} title="Login" />
+    <AuthButton onPress={handleSubmit} title="Login"/>
     </View>
   )
 };
@@ -69,13 +70,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     padding: 5
-  },
-  loginButton:{
-    borderRadius: 50,
-    marginTop: 10,
-    padding: 10
   }
-
 
 });
 

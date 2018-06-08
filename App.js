@@ -21,6 +21,7 @@ class App extends Component {
      * (logged out) or an Object (logged in)
      */
   componentDidMount() {
+    console.log('component did mount app')
     this.authSubscription =
       firebase.auth().onAuthStateChanged((user) => {
         this.setState({

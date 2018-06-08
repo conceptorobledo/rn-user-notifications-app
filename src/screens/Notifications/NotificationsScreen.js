@@ -2,19 +2,29 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 import NotificationsList from '../../components/NotificationsList/NotificationsList'
-import SignOutButton from '../../components/ConfigurationComponent/SignOutButton';
+import SignOutButton from '../../components/Buttons/SignOutButton';
+import NavContainer from '../../components/Navigation/NavContainer';
 
 
 class NotificationsScreen extends Component {
 
+    static navigationOptions = ({navigation}) => ({
+        headerRight: <NavContainer onPress={()=>navigation.navigate("Settings")}/>
+    })
+    
     render() {
         return (
-            <View>
-                <NotificationsList/>
-                <SignOutButton/>
+            <View style={styles.screen}>
+                <NotificationsList />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    screen: {
+        backgroundColor: "#FFF"
+    }
+})
 
 export default NotificationsScreen;

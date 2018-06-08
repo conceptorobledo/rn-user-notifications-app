@@ -20,8 +20,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         borderBottomWidth: 1,
         borderBottomColor: '#f4f4f4',
-        paddingHorizontal: 15,
-        paddingVertical: 25
+        paddingHorizontal: 5,
+        paddingVertical: 20,
+        marginHorizontal: 15
     },
     thumbnail: {
         width: 50,

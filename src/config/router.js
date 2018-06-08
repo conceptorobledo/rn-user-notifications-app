@@ -1,10 +1,12 @@
 import React from 'react';
-import { createMaterialTopTabNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
-import NotificationsScreen from '../screens/Notifications/NotificationsScreen'
-import ProfileScreen from '../screens/Profile/ProfileScreen'
+import NotificationsScreen from '../screens/Notifications/NotificationsScreen';
+import ProfileScreen from '../screens/Profile/ProfileScreen';
+import SettingsScreen from '../screens/SettingsScreen/SettingsScreen';
 
-export const AppStackNavigator = createMaterialTopTabNavigator({
-    "Notificaciones": NotificationsScreen,
-    "Perfil": ProfileScreen
+export const AppStackNavigator = createStackNavigator({
+    Notificaciones: {screen: NotificationsScreen},
+    Perfil: {screen: ProfileScreen},
+    Settings: {screen: SettingsScreen }
 });
