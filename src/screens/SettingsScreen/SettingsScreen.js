@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import firebase from 'react-native-firebase';
-import SignOutButton from '../../components/Buttons/SignOutButton';
+import SignOutButton from '../../components/UI/Buttons/SignOutButton';
 
 class SettingsScreen extends Component {
     //TODO

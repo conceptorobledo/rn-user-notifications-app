@@ -3,7 +3,6 @@
 Aplicación RN + Firebase para recibir notificaciones desde la base de datos en tiempo real.
 
 ## Tabla de contenidos
-
 - [Aplicación de notificaciónes a usuario](#aplicacion-de-notificaciones-a-usuario)
     - [Tabla de contenidos](#tabla-de-contenidos)
     - [Pendientes del proyecto](#pendientes-del-proyecto)

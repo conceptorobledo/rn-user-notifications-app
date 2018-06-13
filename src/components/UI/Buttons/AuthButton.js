@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const authButton = (props) => {
     return (
-        <TouchableOpacity style={styles.button} onPress={props.onPress}>
+        <TouchableOpacity style={[styles.button,{backgroundColor:props.color,borderColor:props.color}]} onPress={props.onPress}>
         <Text style={styles.text}>{ props.title }</Text>
         </TouchableOpacity>
     );
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
         marginTop:10,
         padding: 20,
         width:'100%',
-        backgroundColor: '#00aeef',
-        borderRadius: 4,
+        borderRadius: 14,
+        borderWidth: 1,
         alignItems: 'center'
     },
     text:{

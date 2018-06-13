@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground, Text } from 'react-native';
 
 import Logo from '../../components/AuthComponent/Logo';
-import LoginForm from '../../components/AuthComponent/LoginForm';
+import LoginForm from '../../components/AuthComponent/LoginForm/LoginForm';
 import Overlay from '../../components/UI/overlay';
 
 class LoginScreen extends Component {
@@ -28,7 +28,7 @@ class LoginScreen extends Component {
             <View style={styles.container}>
                 <ImageBackground style={styles.background} imageStyle={{ resizeMode: 'stretch' }} source={require('../../assets/background.jpg')}>
                 </ImageBackground>
-                <Overlay color={"rgba(0,0,0,0.25)"}/>
+                <Overlay color={"rgba(0,168,232, 0.5)"}/>
                 <Logo />
                 <LoginForm loginStatusVerified={this.isAuth} />
             </View>

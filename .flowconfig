@@ -19,6 +19,9 @@
 ; Ignore metro
 .*/node_modules/metro/.*
 
+; Ignorar history de VScode
+.*.history*
+
 [include]
 
 [libs]

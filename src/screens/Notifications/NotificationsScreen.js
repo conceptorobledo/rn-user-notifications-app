@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 import NotificationsList from '../../components/NotificationsList/NotificationsList'
-import SignOutButton from '../../components/Buttons/SignOutButton';
 import NavContainer from '../../components/Navigation/NavContainer';
 
 
